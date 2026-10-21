@@ -7,5 +7,5 @@ window.SALA_CONFIG = {
   anonKey: "sb_publishable_C6QY2-LdZRsa3x2dRj9tig_cgO8X3gi"   // ex.: "eyJhbGciOi..." ou "sb_publishable_..."
   // Opcionais:
   // playerUrl: "https://seusite.com/Ficha_Gotica_v20_player.html",  // base do link de convite
-  // libUrl: ""   // caminho próprio da biblioteca supabase-js (padrão: vendor/supabase.js e depois a CDN)
+  // libUrl: "/vendor/supabase.js"   // caminho próprio da biblioteca supabase-js (padrão: vendor/supabase.js e depois a CDN)
 };
