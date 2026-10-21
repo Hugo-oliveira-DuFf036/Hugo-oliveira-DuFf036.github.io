@@ -3,7 +3,7 @@
    Use SOMENTE a chave pública (anon / publishable). NUNCA a service_role / secret. 
 transformr em js. */
 window.SALA_CONFIG = {
-  url: "https://rxitxhydkgnceysvkkxp.supabase.co/rest/v1/",     
+  url: "https://rxitxhydkgnceysvkkxp.supabase.co",     
   anonKey: "sb_publishable_C6QY2-LdZRsa3x2dRj9tig_cgO8X3gi" 
  /* // Opcionais:
   // playerUrl: "https://seusite.com/Ficha_Gotica_v20_player.html",  // base do link de convite
