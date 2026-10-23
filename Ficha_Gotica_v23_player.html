@@ -292,7 +292,7 @@ main,#lb,#toast{display:none!important}
 </nav>
 <div id="chips" class="chips" hidden></div>
 
-<!-- ============ CONFIG ============ -->
+<!-- ============ CONFIG ============ vai se fuder meu celebro esta fritando, e 60% disso é ia-->
 <div class="tab" data-tab="config">
 <section>
 <h2>Regras de perícias</h2>
@@ -1292,7 +1292,7 @@ function syncInputs(force){
   document.querySelectorAll("[data-co]").forEach(el=>{if(force||el!==document.activeElement)el.value=S.moedas[el.dataset.co]});
 }
 
-/* ---------- render principal ---------- */
+/* ---------- render principal ----------  tomar no cu numca mais faço nada */
 function renderCfg(){
   const cs=$("csList");if(!cs)return;
   cs.innerHTML=S.cs.length?S.cs.map((o,i)=>`<div class="row"><span class="n">${o.n.replace(/[<>&"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c]))} <span class="mut">(${o.a})</span></span><button data-a="csdel" data-i="${i}">Remover</button></div>`).join(""):'<p class="mut">Nenhuma perícia personalizada.</p>';
@@ -1301,6 +1301,7 @@ function renderCfg(){
   const colorKeys={cBg:"--bg",cCard:"--card",cCard2:"--card2",cBtn:"--btn",cLine:"--line",cText:"--txt",cMuted:"--mut"};
   Object.entries(colorKeys).forEach(([k,v])=>{const el=document.querySelector(`[data-k="${k}"]`);if(el&&el!==document.activeElement){const val=/^#[0-9a-f]{6}$/i.test(String(S[k]||""))?S[k]:cv(v);if(/^#[0-9a-f]{6}$/i.test(val))el.value=val}});
 }
+  /*melhor eu numca mais mecher aqui*/
 function render(force){
   fix();applyTema();
   document.querySelectorAll(".tab").forEach(s=>s.hidden=s.dataset.tab!==S.tab);
@@ -3133,7 +3134,7 @@ $u("phmOk").addEventListener("click",confirmPh);$u("phmNo").addEventListener("cl
 document.addEventListener("dragover",ev=>{if(ev.target.closest&&ev.target.closest("#phCard")){ev.preventDefault()}});
 document.addEventListener("drop",ev=>{if(ev.target.closest&&ev.target.closest("#phCard")){ev.preventDefault();const f=ev.dataTransfer&&ev.dataTransfer.files[0];if(f){ctx={mode:IMG.some(i=>i.id===S.capa)?"rep":"add",id:S.capa};if(!lock())chosen(f)}}});
 document.addEventListener("keydown",ev=>{if(ev.key==="Escape")$u("phModal").hidden=true});
-/* ganchos: redesenham depois do render/renderLore existentes (sem alterar a lógica deles) */
+/* ganchos: redesenham depois do render/renderLore existentes (sem alterar a lógica deles) ps:melhor nao mecher nisso*/
 const _r=render,_l=renderLore;
 render=function(f){_r(f);phDraw();layout()};renderLore=function(){_l();phDraw();galBtns()};
 cfgDraw();phDraw();galBtns();layout();
